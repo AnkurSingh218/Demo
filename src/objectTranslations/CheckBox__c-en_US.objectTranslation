@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CheckBox</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CheckBox</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- CheckBox --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Check required YES / NO --></label>
+        <name>Check_required_YES_NO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rectification if Any required --></label>
+        <name>Rectification_if_Any_required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Description --></label>
+        <name>Test_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test/Results --></label>
+        <name>Test_Results__c</name>
+    </fields>
+    <fields>
+        <label><!-- Verified --></label>
+        <name>Verified__c</name>
+    </fields>
+    <layouts>
+        <layout>CheckBox Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

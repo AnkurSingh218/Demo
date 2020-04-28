@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SolarBot</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SolarBots</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- SolarBots --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- All Time Percent Obscured Average --></label>
+        <name>All_Time_Obscured_Percent_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Time Temperature Average --></label>
+        <name>All_Time_Temperature_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- All Time kWh Average --></label>
+        <name>All_Time_kWh_Average__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Status Records --></label>
+        <name>Number_of_Status_Records__c</name>
+    </fields>
+    <fields>
+        <label><!-- Obscured Roll-Up --></label>
+        <name>Obscured_Roll_Up__c</name>
+    </fields>
+    <fields>
+        <label><!-- SolarBot Model --></label>
+        <name>SolarBot_Model__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temp Roll-Up --></label>
+        <name>Temp_Rollup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Under Warranty? --></label>
+        <name>Under_Warranty__c</name>
+    </fields>
+    <fields>
+        <label><!-- Warranty Expiration --></label>
+        <name>Warranty_Expiration__c</name>
+    </fields>
+    <fields>
+        <label><!-- kWh Roll-Up --></label>
+        <name>kWh_Roll_Up__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
