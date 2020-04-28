@@ -1,0 +1,209 @@
+<apex:page standardController="Account"  renderAs="pdf" standardStylesheets="false" applyBodyTag="false" showHeader="false"
+           sidebar="false">
+    <head>
+        
+        <style type="text/css">
+            
+            td {
+            padding:4px;
+            
+            }
+            
+            body{ 
+            font-family:arial;
+            }
+            @page { 
+            size: letter portrait;
+            padding-top: 220px;
+            
+            
+            
+            @top-center {                                
+            content: element(header);                            
+            }
+            
+            }
+            div.header {                                     
+            padding: 10px;                      
+            position: running(header);         
+            }      
+            
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <apex:image url="{!URLFOR($Resource.Adlec,'Adlec/adlec-logo.jpg')}" height="130" width="150"/>
+            </div>
+            <div>
+                <CENTER><h3><u>ADLEC POWER PRIVATE LIMITED</u></h3></CENTER>
+            </div>
+            <div>
+                <CENTER><h3><u>SYSTEM  ACCEPTANCE REPORT</u></h3></CENTER>
+            </div>
+        </div>
+        <div>
+            <CENTER><h3><u>Pre-commissioning chck list for Legrand BBT</u></h3></CENTER>
+        </div>
+        <div class="body" >
+            <div>
+                <table border ="1">
+                    <tr>
+                        <td width ="50%">Plant</td> 
+                        <td width ="50%" style="text-align:center;"></td>
+                    </tr>
+                    <tr>
+                        <td width ="50%">Client</td> 
+                        <td width ="50%" style="text-align:center;"></td>
+                    </tr>
+                    <tr>
+                        <td width ="50%">Confirmation of order</td> 
+                        <td width ="50%" style="text-align:center;"></td>
+                    </tr>
+                    <tr>
+                        <td width ="50%">Manufacturing year</td> 
+                        <td width ="50%" style="text-align:center;"></td>
+                    </tr>
+                    <tr>
+                        <td width ="50%">Installation Year</td> 
+                        <td width ="50%" style="text-align:center;"></td>
+                    </tr>
+                    <tr>
+                        <td width ="50%">Installing Company</td> 
+                        <td width ="50%" style="text-align:center;"></td>
+                    </tr>
+                </table>
+                <div>
+                    <CENTER><h3><u>Inspections After Installation</u></h3></CENTER>
+                </div>
+                <br/>
+                <div>
+                    <table border="1">
+                        <tr>
+                            <td width ="50%">Person In Charge of Inspections</td>
+                            <td width ="50%" style="text-align:center;"></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Company(if different from installing company)</td>
+                            <td width ="50%" style="text-align:center;"></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Inspection Date</td>
+                            <td width ="50%" style="text-align:center;"></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Signature</td>
+                            <td width ="50%" style="text-align:center;"></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Element Alignment</td>
+                            <td width ="50%" style="text-align:center;" >Yes</td>
+                        </tr>                       
+                    </table>
+                </div>
+                <div>
+                    <CENTER><h3><u>Junctions</u></h3></CENTER>
+                </div>
+                <br/>
+                <div>
+                    <table border="1">
+                        <tr>
+                            <td width ="50%">Checked  Junctions (Quantity)</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Total Junctions (Quantity)</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Correct Installation</td>
+                            <td width ="50%" style="text-align:center;" >Yes</td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Soundness of Insulating Parts</td>
+                            <td width ="50%" style="text-align:center;" >No</td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Correct Centring</td>
+                            <td width ="50%" style="text-align:center;" >Yes</td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Correct Coupling Clamp(85 Nm)- Write Value</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <CENTER><h3><u>Connections to Switchboard</u></h3></CENTER>
+                </div>
+                <div>
+                    <table border="1">
+                        <tr>
+                            <td width ="50%">Correct Air Distance b/w Bars</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Correct Coupling Clamp</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <CENTER><h3><u>Tests on Electric Safety</u></h3></CENTER>
+                </div>
+                <div>
+                    <table border="1">
+                        <tr>
+                            <td width ="50%">Insulating resistance between L1 &amp; Neutral (L1-N)</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Insulating resistance between L2 &amp; Neutral (L2-N)</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Insulating resistance between L3 &amp; Neutral (L3-N)</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Insulating resistance between L1 &amp; L2 (L1-L2)</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Insulating resistance between L2 &amp; L3 (L2-L3)</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Insulating resistance between L3 &amp; L1 (L3-L1)</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Insulating resistance between L1 &amp; Earth (L1-PE)</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Insulating resistance between L2 &amp; Earth (L2-PE)</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Insulating resistance between L3 &amp; Earth (L3-PE)</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Insulating resistance between Neutral &amp; Earth (N-PE)</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                        <tr>
+                            <td width ="50%">Test Volatage</td>
+                            <td width ="50%" style="text-align:center;" ></td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <div>
+                        Note:N.B. Write the measured value of the insulating resistance
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</apex:page>

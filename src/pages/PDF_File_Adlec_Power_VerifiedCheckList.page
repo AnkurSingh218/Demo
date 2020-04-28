@@ -1,0 +1,364 @@
+<apex:page standardController="Account"  renderAs="pdf" standardStylesheets="false" applyBodyTag="false" showHeader="false"
+           sidebar="false">
+    <head>
+        
+        <style type="text/css">
+             
+           td {
+            padding:3px;
+           
+            }
+      
+            body{ 
+            font-family:arial;
+            }
+            @page { 
+            size: letter portrait;
+            padding-top: 210px;
+            
+            
+            
+            @top-center {                                
+	   content: element(header);                            
+	   }
+            
+      }
+             div.header {                                     
+	   padding: 10px;                      
+	   position: running(header);         
+	   }      
+            
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <apex:image url="{!URLFOR($Resource.Adlec,'Adlec/adlec-logo.jpg')}" height="120" width="150"/>
+            </div>
+            <div>
+                <CENTER><h3><u>ADLEC POWER PRIVATE LIMITED</u></h3></CENTER>
+            </div>
+            <div>
+                <CENTER><h3><u>SYSTEM  ACCEPTANCE REPORT</u></h3></CENTER>
+            </div>
+            <div>
+                <CENTER><h3><u>BUSDUCT CHECK LIST</u></h3></CENTER>
+            </div>
+        </div>
+        <div class="body" style="margin-top:200px;">
+        <div>
+            <table border="1">
+                <tr>
+                    <th width ="50%">Customer Name</th> 
+                    <th width ="50%"></th>
+                </tr>
+                <tr>
+                    <th>Project</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>Equipment Description</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>Equipment Description</th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <div>
+            &nbsp;&nbsp;Following checks to be carried out
+        </div>
+        <br/>
+        <div style="page-break-after:always;">
+            <table border="1">
+                <tr>
+                    <th width ="10%">Type of check</th>
+                    <th width ="34%">Test Description</th> 
+                    <th width ="8%">Check Required YES/NO</th>
+                    <th width ="8%">Verified</th>
+                    <th width ="20%">Test/Results</th>
+                    <th width ="20%">Rectification If Any required</th>
+                </tr>
+                <!--tr> 
+                    <td>Mechanical Checks</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr-->
+                <tr>
+                    <td>Mechanical Checks</td>
+                    <td>Check that Busduct  is installed as per the final Approved / AsBuilt Drawing</td>
+                    <td  style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mechanical Checks</td>
+                    <td>Check for all Transport sections Proper connected</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mechanical Checks</td>
+                    <td>Check for expansion joints provided at required transport sections if any</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mechanical Checks</td>
+                    <td>Check that canopies placed on all Outdoor sections if any</td>
+                    <td style="text-align:center;"><apex:image style="align:center;" url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mechanical Checks</td>
+                    <td>Check for Earthing strip connected at both with flangeend Earthing bolt</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>      
+    
+        <div style="page-break-after:always;">
+            <table border="1">
+                <tr>
+                    <th width ="10%">Type of check</th>
+                    <th width ="34%">Test Description</th> 
+                    <th width ="8%">Check Required YES/NO</th>
+                    <th width ="8%">Verified</th>
+                    <th width ="20%">Test/Results</th>
+                    <th width ="20%">Rectification If Any required</th>
+                </tr>
+                <!--tr>
+                    <td>VISUAL</td>
+                    <td align="center"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr-->
+                <tr>
+                    <td>VISUAL</td>
+                    <td>Check for all Joints &amp; Fish Plates provided at all Joint is bolted &amp; Tightened properly</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>VISUAL</td>
+                    <td>Check that horizontal &amp; vertical alignment of Busduct</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>VISUAL</td>
+                    <td>Check for Copper flexible bolted on both holes</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>VISUAL</td>
+                    <td>Check that rubber bellow is installed properly (If required)</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>VISUAL</td>
+                    <td>Check for any unnecessary stress at the Busduct (Other Services should not rest on Busduct)</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>VISUAL</td>
+                    <td>Make sure all removed covers has placed and tightened properly</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>VISUAL</td>
+                    <td>Check for general cleaning of the Busduct.(Clean Before Energizing)</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    
+    
+        <div style="page-break-after:always;">
+            <table border="1">
+                <tr>
+                    <th width ="10%">Type of check</th>
+                    <th width ="34%">Test Description</th> 
+                    <th width ="8%">Check Required YES/NO</th>
+                    <th width ="8%">Verified</th>
+                    <th width ="20%">Test/Results</th>
+                    <th width ="20%">Rectification If Any required</th>
+                </tr>
+                <tr>
+                    <!--td>TESTS &amp; MEASUREMENT</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td-->
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Check for proper phase sequence at input and output ends</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Perform Megger Tests before energizing (with 500V DC) Megger Device on Input and Output End</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Between R &amp; Y Phase:</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Between R &amp; B Phase:</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Between R &amp; N Phase:</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Between R &amp; Earth</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Between Y &amp; B Phase:</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Between Y &amp; N Phase:</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Between Y &amp; Earth</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Between B &amp; N Phase:</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Checkbox.png')}" height="25" width="25"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Between B &amp; Eart</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Between N &amp; Eart</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TESTS &amp; MEASUREMENT</td>
+                    <td>Other Tests / Observations (Specific to site)</td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td style="text-align:center;"><apex:image url="{!URLFOR($Resource.Adlec,'Adlec/Uncheckbox.jpg')}" height="20" width="20"/></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+            </table>
+        </div>
+            <br/>
+            <br/>
+        <div>
+            <table border="1" >
+                
+                <tr>
+                    <th>Signature </th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr style="height:20px;">
+                    <th></th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th width ="33.3%">Contractor /  Manufacturer  / Client Representative’s </th>
+                    <td width ="33.3%"></td>
+                    <td width ="33.3%"></td>
+                </tr>
+            </table>
+        </div>
+        </div>
+    </body>
+</apex:page>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SolarBot Status</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SolarBot Status</value>
+    </caseValues>
+    <fields>
+        <label><!-- Kilowatt Hours --></label>
+        <name>Kilowatt_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maintenance Requested --></label>
+        <name>Maintenance_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Panel Temperature --></label>
+        <name>Panel_Temperature__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percent Obscured --></label>
+        <name>Percent_Obscured__c</name>
+    </fields>
+    <fields>
+        <label><!-- SolarBot --></label>
+        <name>SolarBot__c</name>
+        <relationshipLabel><!-- SolarBot Status --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status Date --></label>
+        <name>Status_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>SolarBot Status Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
